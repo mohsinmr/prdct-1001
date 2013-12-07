@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".SlidingTitleBar" >
+
+    <!--
+    <com.actionbarsherlock.internal.view.menu.ActionMenuView
+        android:id="@+id/actionMenuView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </com.actionbarsherlock.internal.view.menu.ActionMenuView>
+    -->
+
+
+    <!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#C0C0C0"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COURSES"
+            android:textColor="#669999"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="157dp" >
+
+    </ListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#C0C0C0"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COURSES"
+            android:textColor="#669999"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView2"
+        android:layout_width="match_parent"
+        android:layout_height="157dp" >
+
+    </ListView>
+    -->
+
+    <com.actionbarsherlock.internal.widget.ActionBarContainer
+        android:id="@+id/actionBarContainer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </com.actionbarsherlock.internal.widget.ActionBarContainer>
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="USER NAME" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="PASSWORD" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:text="LOGIN" />
+
+</LinearLayout>
