@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+   android:background="@android:color/background_dark"
+    tools:context=".MainActivity" >
+    
+       <EditText
+        android:id="@+id/txt_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_signin"
+        android:layout_alignLeft="@+id/txt_username"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:hint="@string/txt_pwd"
+        android:inputType="textPassword" />
+     
+     <Button
+        android:id="@+id/btn_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txt_pwd"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/txt_pwd"
+        android:layout_marginBottom="14dp"
+        android:text="@string/tv_signin" />
+
+     <TextView
+         android:id="@+id/tv_welcome2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/tv_signin"
+         android:text="@string/tv_welcome2"
+         android:textColor="@android:color/background_light"
+         android:textSize="@dimen/tv_signin"
+         android:textStyle="bold"
+         android:typeface="sans" />
+
+     <TextView
+         android:id="@+id/tv_signin"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/tv_welcome2"
+         android:layout_alignParentTop="true"
+         android:layout_marginTop="26dp"
+         android:text="@string/tv_welcome"
+         android:textColor="@android:color/background_light"
+         android:textStyle="italic"
+         android:typeface="sans" />
+
+     <EditText
+         android:id="@+id/txt_username"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/txt_pwd"
+         android:layout_alignParentLeft="true"
+         android:layout_marginBottom="44dp"
+         android:ems="10"
+         android:hint="@string/txt_username" />
+
+     <ImageSwitcher
+         android:id="@+id/imageSwitcher1"
+        android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:layout_above="@+id/txt_username"
+         android:layout_marginBottom="21dp"
+         android:layout_marginLeft="14dp"
+         android:layout_toRightOf="@+id/tv_welcome2">
+     </ImageSwitcher>
+
+</RelativeLayout>

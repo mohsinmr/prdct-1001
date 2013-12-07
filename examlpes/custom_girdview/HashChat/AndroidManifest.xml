@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uz.main.hashchat"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:debuggable="true">
+        
+        <activity
+            android:name="uz.main.hashchat.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="uz.main.hashchat.Views"
+            android:label="@string/title_activity_views"
+            android:parentActivityName="uz.main.hashchat.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uz.main.hashchat.MainActivity" />
+        </activity>
+        <activity
+            android:name="uz.main.hashchat.CList"
+            android:label="@string/title_activity_clist"
+            android:parentActivityName="uz.main.hashchat.Views" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uz.main.hashchat.Views" />
+        </activity>
+        <activity
+            android:name="uz.main.hashchat.ContactManager"
+            android:label="@string/title_activity_contact_manager"
+            android:parentActivityName="uz.main.hashchat.Views" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="uz.main.hashchat.Views" />
+        </activity>
+    </application>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+</manifest>
