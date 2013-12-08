@@ -1,0 +1,6 @@
+http://www.vogella.com/articles/AndroidAnimation/article.html
+http://hasmukhbhadani.blogspot.com/search/label/Frame%20Animation%20in%20android.
+http://stackoverflow.com/questions/9247792/how-to-make-animation-for-popup-window-in-android
+http://stackoverflow.com/questions/6796139/fade-in-fade-out-android-animation-in-java
+http://developer.android.com/training/animation/crossfade.html
+http://android-er.blogspot.com/2011/09/implement-simple-fade-in-animation.html
