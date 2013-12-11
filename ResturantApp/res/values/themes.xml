@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <style name="Theme" parent="android:Theme">
+	
+	</style>
+    
+    
+    <style name="Theme.Theme1">
+        
+        <item name="default_Layout_Background">@style/Default_Layout_Background_Theme1</item>
+        <item name="header_Layout">@style/General_header_layout</item>
+        <item name="iconHome">@style/IMAGE_VIEW</item>
+        
+        
+        
+        
+        
+        
+    </style>
+    
+    
+    
+    
+    
+    
+</resources>

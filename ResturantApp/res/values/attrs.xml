@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+	<attr name="default_Layout_Background"  format="reference"/>
+	<attr name="header_Layout" format="reference" />
+	<attr name="iconHome" format="reference"/>
+</resources>
