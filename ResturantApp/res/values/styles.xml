@@ -1,20 +1,46 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
-    <style name="AppBaseTheme" parent="android:Theme.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
+    <style
+        name="GeneralRelativeLayout.CustomRelativeLayout.Linear_Custom_1" 
+        parent="android:Theme.Light">
+		<item name="android:background">@drawable/shadow</item>      
     </style>
-
+	<style name="Default_Layout_Background_Theme1">
+	   <item name="android:background">@drawable/header_gradient_grey</item>
+	</style>
+	
+	
+	
+	<style name="General_header_layout">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">50dp</item>
+		<item name="android:background">@drawable/green_gradient_th2</item> 
+	</style>
+	
+	<style name ="IMAGE_VIEW_GENERAL">
+	    <item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+	</style>
+	<style name ="IMAGE_VIEW"
+	       parent="IMAGE_VIEW_GENERAL">
+		<item name="iconHome">@drawable/home_icon</item>
+	</style>
+	
+	
+	
+	
+	
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    
+    
 
+    
+    
 </resources>

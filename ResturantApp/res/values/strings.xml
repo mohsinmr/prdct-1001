@@ -5,5 +5,37 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
 	<string name="share">Share</string>
+	<string name="book_order">BOOK YOUR ORDER</string>
+	
+	<string name="str_Courses">COURSES</string>
+	<string name="str_Catagories">CATAGORIES</string>
+	
+	
+     <color name="red">#900</color>
+    <color name="green">#090</color>
+    <color name="blue">#009</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+    
+    
+    
+    <string-array name="CATAGORIES_ARRAY">
+        <item>MAIN COURSE</item>
+        <item>STARTER</item>
+        <item>DESERT</item>
+        <item>CHINES</item>
+        <item>FAST FOOD</item>
+     </string-array>
+     
+        <string-array name="course_img">
+        <item>@drawable/burger</item>
+        <item>@drawable/french_fries</item>
+        <item>@drawable/cake</item>
+        <item>@drawable/samosa</item>
+        <item>@drawable/burger</item>
+       </string-array>
+    
+    
+    
     
 </resources>

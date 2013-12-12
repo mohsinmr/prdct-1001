@@ -1,19 +1,19 @@
 package com.example.resturantapp;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.ListFragment;
-import android.support.v4.view.ViewPager;
+
 
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
+
+
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu.CanvasTransformer;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 
 public class BaseActivity extends SlidingFragmentActivity {
@@ -30,7 +30,7 @@ public class BaseActivity extends SlidingFragmentActivity {
 		super.onCreate(savedInstanceState);
 		
 		setTitle(mTitleRes);
-
+		
 		// set the Behind View
 		setBehindContentView(R.layout.menu_frame);
 		if (savedInstanceState == null) {
@@ -46,9 +46,14 @@ public class BaseActivity extends SlidingFragmentActivity {
 		SlidingMenu sm = getSlidingMenu();
 		sm.setShadowWidthRes(R.dimen.shadow_width);
 		sm.setShadowDrawable(R.drawable.shadow);
-		//sm.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+		sm.setBehindOffsetRes(R.dimen.slidingmenu_offset);
+		
 		sm.setFadeDegree(0.50f);
-		sm.setTouchModeAbove(SlidingMenu.LEFT);
+		
+		//sm.setMode(SlidingMenu.LEFT_RIGHT);
+		sm.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+	
+		//sm.setTouchModeAbove(SlidingMenu.LEFT_RIGHT);
 		sm.setBehindWidth(333);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 	}

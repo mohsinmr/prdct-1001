@@ -1,108 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" 
+    android:layout_height="match_parent" >
+
    
-    android:orientation="vertical"
-     >
+<RelativeLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/gridRowLayout"
+    >
+    <ImageView
+        android:id="@+id/grid_item_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/samosa" />
 
-       
-       <LinearLayout
-           android:id="@+id/linLay01EFL"
-           android:layout_width="120dp"
-           android:layout_height="77dp"
-           android:layout_alignParentLeft="true"
-           android:layout_alignParentTop="true"
-           android:background="@color/abs__background_holo_light"
-           android:orientation="vertical" >
-
-           <TextView
-               android:id="@+id/txtViwCategory01EFL"
-               android:layout_centerVertical="true"
-               android:layout_gravity="center"
-               android:layout_marginTop="8dp" />
-
-           <TextView
-               android:id="@+id/txtViwPercent01EFL"
-               android:layout_alignParentRight="true"
-               android:layout_centerVertical="true"
-               android:layout_gravity="center"
-               android:layout_marginTop="5dp"
-               android:textStyle="bold" />
-       </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linLay01EFL"
-            android:layout_width="120dp"
-            android:layout_height="77dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="130dp"
-            android:background="@color/abs__background_holo_light"
-            android:orientation="vertical" >
-
+     <TextView
+        android:id="@+id/tvIitemName"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="30dip"
+        android:layout_toRightOf="@+id/grid_item_img"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:text="SAMOSA" />
+     
+     
             <TextView
-                android:id="@+id/txtViwCategory01EFL"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:layout_marginTop="8dp" />
+        android:id="@+id/tvPriceTag"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/grid_item_img"
+      	android:textColor="@color/red"
+        android:layout_below="@+id/tvIitemName"
+        android:layout_height="wrap_content"
+        android:text="250.0" 
+        android:layout_marginTop="100dip"
+       	android:layout_marginLeft="100dp"
+        />
+ 
+     
+     </RelativeLayout>
 
-            <TextView
-                android:id="@+id/txtViwPercent01EFL"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:textStyle="bold" />
-        </LinearLayout>
-       <LinearLayout
-            android:id="@+id/linLay01EFL"
-            android:layout_width="120dp"
-            android:layout_height="77dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginRight="145dp"
-            android:background="@color/abs__background_holo_light"
-            android:orientation="vertical" >
+  
 
-            <TextView
-                android:id="@+id/txtViwCategory01EFL"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:layout_marginTop="8dp" />
-
-            <TextView
-                android:id="@+id/txtViwPercent01EFL"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-       <LinearLayout
-           android:id="@+id/linLay01EFL"
-           android:layout_width="120dp"
-           android:layout_height="77dp"
-           android:layout_alignParentRight="true"
-           android:layout_alignParentTop="true"
-           android:layout_marginRight="13dp"
-           android:background="@color/abs__background_holo_light"
-           android:orientation="vertical" >
-
-           <TextView
-               android:id="@+id/txtViwCategory01EFL"
-               android:layout_centerVertical="true"
-               android:layout_gravity="center"
-               android:layout_marginTop="8dp" />
-
-           <TextView
-               android:id="@+id/txtViwPercent01EFL"
-               android:layout_alignParentRight="true"
-               android:layout_centerVertical="true"
-               android:layout_gravity="center"
-               android:layout_marginTop="5dp"
-               android:textStyle="bold" />
-       </LinearLayout>
-
-</RelativeLayout>
+</FrameLayout>

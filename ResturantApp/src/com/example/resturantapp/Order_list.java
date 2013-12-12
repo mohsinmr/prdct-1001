@@ -7,13 +7,15 @@ package com.example.resturantapp;
 
 
 
+import java.util.ArrayList;
+
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.view.View;
+import android.widget.Toast;
 
-import com.actionbarsherlock.internal.widget.ActionBarView.HomeView;
 import com.actionbarsherlock.view.MenuItem;
+
 
 
 
@@ -25,35 +27,21 @@ import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 public class Order_list extends SlidingFragmentActivity{
 
 	private Fragment mContent;
-
+	ArrayList<String> coursesArray;
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		setTitle(R.string.book_order);
-	/*	setSlidingActionBarEnabled(true);
-
-		setContentView(R.layout.order_frame);
 		
-		if(findViewById(R.id.menu_frame)==null)
-		{
-			setContentView(R.layout.menu_frame);
-			getSlidingMenu().setSlidingEnabled(true);
-			getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
-			// show home as up so we can toggle
-			getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		} else {
-			// add a dummy view
-			View v = new View(this);
-			setBehindContentView(v);
-			getSlidingMenu().setSlidingEnabled(false);
-			getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
-		}
- */
-		if (savedInstanceState != null)
+		
+		
+		setTitle(R.string.book_order);
+
+		if (savedInstanceState != null) 
 			mContent = getSupportFragmentManager().getFragment(savedInstanceState, "mContent");
 		if (mContent == null)
-			mContent = new ColorFragment(R.color.red);	
+			mContent = new OrderGridFragment(0);	
 		
 		setContentView(R.layout.order_frame);
 		getSupportFragmentManager()
@@ -65,7 +53,7 @@ public class Order_list extends SlidingFragmentActivity{
 		setBehindContentView(R.layout.menu_frame);
 		getSupportFragmentManager()
 		.beginTransaction()
-		.replace(R.id.menu_frame, new ColorMenuFragment())
+		.replace(R.id.menu_frame, new CatagoriesListAdapter())
 		.commit();
 
 		
@@ -77,6 +65,7 @@ public class Order_list extends SlidingFragmentActivity{
 		sm.setShadowWidthRes(R.dimen.shadow_width);
 		sm.setShadowDrawable(R.drawable.shadow);
 		sm.setBehindScrollScale(0.25f);
+		sm.setBehindWidth(333);
 		sm.setFadeDegree(0.25f);
 		sm.setSecondaryMenu(getLayoutInflater().inflate(R.layout.menu_frame_two, null));
 		getSupportFragmentManager()
@@ -106,12 +95,21 @@ public class Order_list extends SlidingFragmentActivity{
 		getSupportFragmentManager().putFragment(outState, "mContent", mContent);
 	}
 	
-	public void switchContent(Fragment fragment) {
+	public void switchContent(final Fragment fragment) {
 		mContent = fragment;
+		String mMenuName  =mContent.toString(); 
+		System.out.println(mMenuName);
+		
 		getSupportFragmentManager()
 		.beginTransaction()
 		.replace(R.id.order_frame, fragment)
 		.commit();
+		Handler h = new Handler();
+		h.postDelayed(new Runnable() {
+			public void run() {
+				getSlidingMenu().showContent();
+			}
+		}, 50);
 		getSlidingMenu().showContent();
 	}	
 
@@ -182,5 +180,10 @@ public class Order_list extends SlidingFragmentActivity{
     }*/
 	
 	
+	
+	void showMessage(String text)
+	{
+		Toast.makeText(Order_list.this, ""+text, Toast.LENGTH_LONG).show();
+	}
 	
 }
