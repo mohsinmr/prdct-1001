@@ -1,0 +1,14 @@
+CREATE TABLE ACCOUNT_TYPE (
+      [ACCOUNT_TYPE] [varchar](3) NOT NULL,
+      [SDESC] [varchar](15) NULL
+);
+GO
+CREATE TABLE NAME (
+      [USER_ID] [varchar](10) NOT NULL,
+      [USER_NAME] [varchar](50) NOT NULL,
+      [PASSWORD] [varchar](100) NULL,
+      [EMAIL_ID] [varchar](20) NULL
+);
+GO
+INSERT INTO "NAME" VALUES('1001','Koundinya','123','koundinya.panguluri@gmail.com');
+GO
